@@ -180,18 +180,6 @@ export interface SharedNav extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
-  info: {
-    displayName: 'Quote';
-    icon: 'indent';
-  };
-  attributes: {
-    body: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
-}
-
 export interface SharedReviewSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_review_sections';
   info: {
@@ -214,21 +202,6 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
-  };
-}
-
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
-  info: {
-    description: '';
-    displayName: 'Seo';
-    icon: 'allergies';
-    name: 'Seo';
-  };
-  attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -373,10 +346,8 @@ declare module '@strapi/strapi' {
       'shared.media': SharedMedia;
       'shared.mobile-showcase-banner': SharedMobileShowcaseBanner;
       'shared.nav': SharedNav;
-      'shared.quote': SharedQuote;
       'shared.review-section': SharedReviewSection;
       'shared.rich-text': SharedRichText;
-      'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.social-media': SharedSocialMedia;
       'shared.text': SharedText;
