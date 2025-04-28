@@ -1,5 +1,19 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBlogCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_cards';
+  info: {
+    description: '';
+    displayName: 'Blog_Card';
+    icon: 'apps';
+  };
+  attributes: {
+    card_description: Schema.Attribute.Text;
+    card_title: Schema.Attribute.String;
+    learn_more_link: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCardContent extends Struct.ComponentSchema {
   collectionName: 'components_shared_card_contents';
   info: {
@@ -80,6 +94,20 @@ export interface SharedHero extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     hero_texts: Schema.Attribute.Blocks;
+  };
+}
+
+export interface SharedImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images';
+  info: {
+    displayName: 'image';
+    icon: 'cast';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -191,6 +219,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'text';
+    icon: 'archive';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+  };
+}
+
 export interface SharedTool extends Struct.ComponentSchema {
   collectionName: 'components_shared_tools';
   info: {
@@ -283,12 +322,14 @@ export interface SharedUsertype2 extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.blog-card': SharedBlogCard;
       'shared.card-content': SharedCardContent;
       'shared.checkbox': SharedCheckbox;
       'shared.content': SharedContent;
       'shared.content-pair': SharedContentPair;
       'shared.features-list': SharedFeaturesList;
       'shared.hero': SharedHero;
+      'shared.image': SharedImage;
       'shared.media': SharedMedia;
       'shared.mobile-showcase-banner': SharedMobileShowcaseBanner;
       'shared.nav': SharedNav;
@@ -297,6 +338,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.text': SharedText;
       'shared.tool': SharedTool;
       'shared.tools-section': SharedToolsSection;
       'shared.usertype1': SharedUsertype1;

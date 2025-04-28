@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_social_medias",
+  "info": {
+    "displayName": "social_media",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    }
+  }
+}

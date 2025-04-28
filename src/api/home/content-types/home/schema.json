@@ -10,45 +10,85 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "header": {
       "displayName": "nav",
       "type": "component",
       "repeatable": false,
-      "component": "shared.nav"
+      "component": "shared.nav",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "hero": {
       "displayName": "Hero",
       "type": "component",
       "repeatable": false,
-      "component": "shared.hero"
+      "component": "shared.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "content_pair_primary": {
       "displayName": "content_pair",
       "type": "component",
       "repeatable": false,
-      "component": "shared.content-pair"
+      "component": "shared.content-pair",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "review_section": {
       "displayName": "review_section",
       "type": "component",
       "repeatable": true,
-      "component": "shared.review-section"
+      "component": "shared.review-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "content_pair_secondary": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.content-pair"
+      "component": "shared.content-pair",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "content_pair_ternery": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.content-pair"
+      "component": "shared.content-pair",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "content_pair_fourth": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.content-pair"
+      "component": "shared.content-pair",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "banner": {
       "type": "media",
@@ -59,16 +99,31 @@
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "footer": {
-      "type": "json"
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "tools_section": {
       "displayName": "tools_section",
       "type": "component",
       "repeatable": false,
-      "component": "shared.tools-section"
+      "component": "shared.tools-section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

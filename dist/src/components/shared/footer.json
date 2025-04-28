@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_footers",
+    "info": {
+        "displayName": "Footer",
+        "icon": "server"
+    },
+    "options": {},
+    "attributes": {
+        "nav": {
+            "type": "json"
+        },
+        "socail_media": {
+            "displayName": "social_media",
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.social-media"
+        }
+    }
+}

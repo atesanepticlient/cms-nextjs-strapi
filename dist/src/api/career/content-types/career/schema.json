@@ -1,0 +1,28 @@
+{
+    "kind": "singleType",
+    "collectionName": "careers",
+    "info": {
+        "singularName": "career",
+        "pluralName": "careers",
+        "displayName": "careers",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "Hero": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.hero"
+        },
+        "hero_supporting_text": {
+            "type": "blocks"
+        },
+        "Blog_Card_List": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.blog-card"
+        }
+    }
+}
