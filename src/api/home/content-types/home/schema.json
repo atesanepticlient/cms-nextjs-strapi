@@ -16,17 +16,6 @@
     }
   },
   "attributes": {
-    "header": {
-      "displayName": "nav",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "hero": {
       "displayName": "Hero",
       "type": "component",
@@ -100,14 +89,6 @@
         "videos",
         "audios"
       ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "footer": {
-      "type": "json",
       "pluginOptions": {
         "i18n": {
           "localized": true

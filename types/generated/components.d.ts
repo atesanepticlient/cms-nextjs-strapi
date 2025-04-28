@@ -80,6 +80,31 @@ export interface SharedFeaturesList extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footers';
+  info: {
+    displayName: 'Footer';
+    icon: 'server';
+  };
+  attributes: {
+    nav: Schema.Attribute.JSON;
+    socail_media: Schema.Attribute.Component<'shared.social-media', false>;
+  };
+}
+
+export interface SharedHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_headers';
+  info: {
+    displayName: 'Header';
+    icon: 'grid';
+  };
+  attributes: {
+    button: Schema.Attribute.JSON;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    navlinks: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -219,6 +244,19 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_shared_social_medias';
+  info: {
+    displayName: 'social_media';
+    icon: 'attachment';
+  };
+  attributes: {
+    facebook: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
+    twitter: Schema.Attribute.String;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -328,6 +366,8 @@ declare module '@strapi/strapi' {
       'shared.content': SharedContent;
       'shared.content-pair': SharedContentPair;
       'shared.features-list': SharedFeaturesList;
+      'shared.footer': SharedFooter;
+      'shared.header': SharedHeader;
       'shared.hero': SharedHero;
       'shared.image': SharedImage;
       'shared.media': SharedMedia;
@@ -338,6 +378,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.social-media': SharedSocialMedia;
       'shared.text': SharedText;
       'shared.tool': SharedTool;
       'shared.tools-section': SharedToolsSection;
