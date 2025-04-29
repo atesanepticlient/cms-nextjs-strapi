@@ -11,7 +11,6 @@
   },
   "attributes": {
     "header": {
-      "displayName": "Header",
       "type": "component",
       "repeatable": false,
       "component": "shared.header"
